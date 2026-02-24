@@ -1,25 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>HD Movies</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CineVerse Ultra</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+
+<!-- GSAP CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
 </head>
 <body>
 
+<div class="intro">
+  <h1>CineVerse</h1>
+</div>
+
 <header>
-  <div class="logo">HD Movies</div>
-  <div class="search">
-    <input type="text" id="search" placeholder="Search movies...">
+  <div class="logo">CineVerse</div>
+  <div>
+    <button onclick="toggleTheme()" class="toggle">🌙</button>
   </div>
 </header>
 
-<div class="banner">
-  Unlimited Movies
-</div>
+<section class="hero">
+  <h1>Enter The Cinematic Universe</h1>
+</section>
 
-<div class="container">
-  <h2>Popular Movies</h2>
+<section class="carousel-section">
+  <h2>Featured Movies</h2>
+  <div class="carousel" id="carousel"></div>
+</section>
+
+<section class="grid-section">
+  <h2>Trending</h2>
   <div class="movies" id="movieList"></div>
+</section>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <span onclick="closeModal()" class="close">×</span>
+    <iframe id="trailer" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
+  </div>
 </div>
 
 <script src="script.js"></script>
