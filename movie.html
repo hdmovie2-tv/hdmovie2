@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movie Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">HD Movies</div>
+</header>
+
+<div class="container">
+  <h1 id="title"></h1>
+  <img id="poster" width="300">
+  <p id="description"></p>
+
+  <a href="#" class="button">Watch Trailer</a>
+  <a href="#" class="button">Download</a>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+document.getElementById("title").innerText = params.get("title");
+document.getElementById("poster").src = params.get("image");
+document.getElementById("description").innerText = "This is a demo movie description.";
+</script>
+
+</body>
+</html>
